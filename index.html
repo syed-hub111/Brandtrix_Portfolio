@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BRANDTRIX — Strategic Promotions & High-Impact Brand Activations | Chennai</title>
+  <meta name="description" content="Brandtrix is a premier brand promotion, advertising, and marketing activation agency in Chennai, India. Specializing in ATL/BTL campaigns, tech park activations, residential society takeovers, and high-impact transit branding. We make brands impossible to ignore.">
+  <meta name="keywords" content="Brandtrix, brand promotion Chennai, BTL activations Chennai, tech park branding, society activations, outdoor advertising Chennai, transit branding, bus branding, event management Chennai">
+  <meta name="theme-color" content="#080808">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BRANDTRIX — We Make Brands Impossible to Ignore">
+  <meta property="og:description" content="Premier brand promotion, advertising, and marketing activation agency in Chennai, India. Strategic promotions, powerful activations, real-world brand impact.">
+  <meta property="og:url" content="https://brandtrix.in/">
+
+  <!-- Google Fonts Preconnect & Stylesheets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Favicon / Browser Address & Search Bar Icon -->
+  <link rel="icon" type="image/jpeg" href="assets/brandtrix-logo.jpg">
+  <link rel="shortcut icon" type="image/jpeg" href="assets/brandtrix-logo.jpg">
+  <link rel="apple-touch-icon" href="assets/brandtrix-logo.jpg">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Libraries: GSAP, ScrollTrigger, Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Ambient Cinematic Grain Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Luxury Cursor (Desktop) -->
+  <div class="custom-cursor" aria-hidden="true">
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+    <div class="cursor-label"><span class="cursor-text">EXPLORE</span></div>
+  </div>
+
+  <!-- PRELOADER SEQUENCE -->
+  <aside id="preloader" class="preloader" aria-label="Loading Brandtrix Experience">
+    <div class="preloader-content">
+      <div class="preloader-mark">
+        <img src="assets/brandtrix-logo.jpg" alt="Brandtrix Official Mark" class="preloader-logo-img">
+        <span class="preloader-brand">BRANDTRIX</span>
+      </div>
+      <p class="preloader-tagline">MAKE YOUR MARK. // WE MAKE BRANDS IMPOSSIBLE TO IGNORE</p>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-bar" id="preloaderBar"></div>
+      </div>
+      <div class="preloader-metrics">
+        <span class="preloader-coords">CHENNAI 13.0827° N, 80.2707° E</span>
+        <span class="preloader-counter" id="preloaderPercent">00%</span>
+      </div>
+    </div>
+    <div class="preloader-curtain curtain-top"></div>
+    <div class="preloader-curtain curtain-bottom"></div>
+  </aside>
+
+  <!-- BACKGROUND 3D WEBGL CANVAS -->
+  <div id="webgl-container" class="webgl-canvas-container" aria-hidden="true"></div>
+
+  <!-- HEADER / GLOBAL EDITORIAL NAVIGATION -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="#hero" class="brand-logo" aria-label="Brandtrix Home">
+        <img src="assets/brandtrix-logo.jpg" alt="Brandtrix Official Logo" class="brand-logo-img">
+        <div class="brand-logo-text-group">
+          <span class="logo-text">BRANDTRIX</span>
+          <span class="logo-tagline">MAKE YOUR MARK.</span>
+        </div>
+      </a>
+
+      <!-- Center Status / Live Time in Chennai -->
+      <div class="header-status d-none-mobile">
+        <span class="status-indicator"></span>
+        <span class="status-city">CHENNAI, IN</span>
+        <span class="status-time" id="liveChennaiTime">--:--:-- IST</span>
+        <span class="status-tag">Q3/Q4 BRIEFS OPEN</span>
+      </div>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Audio Synthesizer Mood Toggle -->
+        <button type="button" class="audio-toggle-btn" id="audioToggle" aria-label="Toggle Sound Experience" title="Toggle Ambient Audio">
+          <span class="audio-wave">
+            <span></span><span></span><span></span><span></span>
+          </span>
+          <span class="audio-label d-none-mobile">SOUND OFF</span>
+        </button>
+
+        <a href="#contact" class="btn-editorial-nav d-none-mobile magnetic" data-magnetic-strength="0.2">
+          <span>INITIATE BRIEF</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+
+        <!-- Hamburger / Menu Trigger -->
+        <button type="button" class="menu-toggle-btn" id="menuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="menu-line line-1"></span>
+          <span class="menu-line line-2"></span>
+          <span class="menu-text">MENU</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- FULLSCREEN LUXURY OVERLAY MENU -->
+  <div class="fullscreen-menu" id="fullscreenMenu" aria-hidden="true">
+    <div class="menu-backdrop"></div>
+    <div class="menu-container">
+      <div class="menu-top-meta">
+        <div class="menu-brand-header">
+          <img src="assets/brandtrix-logo.jpg" alt="Brandtrix Mark" class="menu-logo-img">
+          <span class="editorial-idx">BRANDTRIX // MAKE YOUR MARK.</span>
+        </div>
+        <span class="editorial-city">PERAMBUR, CHENNAI — 600011</span>
+      </div>
+      <div class="menu-grid">
+        <nav class="menu-nav" aria-label="Main Navigation">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="#hero" class="menu-link" data-menu-close>
+                <span class="menu-num">01</span>
+                <span class="menu-title">THE PROLOGUE</span>
+                <span class="menu-desc">Immersive Brand Entry</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#brand-intro" class="menu-link" data-menu-close>
+                <span class="menu-num">02</span>
+                <span class="menu-title">THE IDENTITY</span>
+                <span class="menu-desc">Beyond Visibility, Presence</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#services" class="menu-link" data-menu-close>
+                <span class="menu-num">03</span>
+                <span class="menu-title">WHAT WE DO</span>
+                <span class="menu-desc">Activations, Outdoor, Campaigns</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#selected-work" class="menu-link" data-menu-close>
+                <span class="menu-num">04</span>
+                <span class="menu-title">SELECTED WORK</span>
+                <span class="menu-desc">Curated Campaign Dossiers</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#approach" class="menu-link" data-menu-close>
+                <span class="menu-num">05</span>
+                <span class="menu-title">OUR APPROACH</span>
+                <span class="menu-desc">From Strategy to Streets</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#event-management" class="menu-link" data-menu-close>
+                <span class="menu-num">06</span>
+                <span class="menu-title">EVENT SPECIALTY</span>
+                <span class="menu-desc">Keynotes & Brand Launches</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#why-brandtrix" class="menu-link" data-menu-close>
+                <span class="menu-num">07</span>
+                <span class="menu-title">WHY BRANDTRIX</span>
+                <span class="menu-desc">South India Ground Intelligence</span>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#contact" class="menu-link" data-menu-close>
+                <span class="menu-num">08</span>
+                <span class="menu-title">INITIATE BRIEF</span>
+                <span class="menu-desc">Direct Client Engagement</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-sidebar">
+          <div class="menu-contact-box">
+            <span class="box-label">DIRECT INQUIRIES</span>
+            <a href="mailto:growth@brandtrix.org" class="box-link">growth@brandtrix.org</a>
+            <a href="tel:+916379886505" class="box-link">+91 63798 86505</a>
+            <p class="box-address">70/33, Madurai Samy Madam St,<br>Perambur, Chennai - 600011</p>
+          </div>
+          <div class="menu-socials">
+            <span class="box-label">DIRECT CHANNELS</span>
+            <div class="social-links">
+              <a href="https://wa.me/916379886505" target="_blank" rel="noopener noreferrer" class="social-pill">WHATSAPP</a>
+              <a href="mailto:growth@brandtrix.org" class="social-pill">EMAIL DESK</a>
+              <a href="tel:+916379886505" class="social-pill">HOTLINE</a>
+            </div>
+          </div>
+          <div class="menu-quote">
+            <span class="quote-mark">“</span>
+            <p>We do not create ads to be scrolled past. We engineer physical presence that captures the sensory landscape of the city.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- ========================================== -->
+    <!-- SECTION 01 — CINEMATIC HERO                -->
+    <!-- ========================================== -->
+    <section id="hero" class="hero-section" aria-label="Hero Introduction">
+      <div class="hero-bg-gradient" aria-hidden="true"></div>
+
+      <!-- Luxury Geometric Grid Lines -->
+      <div class="hero-fine-grid" aria-hidden="true">
+        <div class="grid-line line-v v-1"></div>
+        <div class="grid-line line-v v-2"></div>
+        <div class="grid-line line-v v-3"></div>
+        <div class="grid-line line-h h-1"></div>
+      </div>
+
+      <div class="hero-inner container-luxury">
+        <!-- Editorial Micro Badge -->
+        <div class="hero-meta-badge" data-reveal="fade">
+          <span class="badge-gem">◆</span>
+          <span class="badge-text">STRATEGIC PROMOTIONS // ATL & BTL ACTIVATIONS</span>
+          <span class="badge-loc">CHENNAI & SOUTH INDIA</span>
+        </div>
+
+        <!-- Master Headline -->
+        <div class="hero-headline-wrapper">
+          <h1 class="hero-headline" aria-label="We Make Brands Unmissable">
+            <div class="headline-row"><span class="reveal-text">WE MAKE</span></div>
+            <div class="headline-row"><span class="reveal-text text-gold-shimmer">BRANDS</span></div>
+            <div class="headline-row"><span class="reveal-text">UNMISSABLE.</span></div>
+          </h1>
+        </div>
+
+        <!-- Editorial Subtitle & Descriptor -->
+        <div class="hero-subgrid">
+          <div class="hero-col-left" data-reveal="fade-up">
+            <p class="hero-lead-text">
+              Strategic promotions. Powerful on-ground activations. Real-world advertising engineered to penetrate high-density urban corridors and command undivided attention.
+            </p>
+            <div class="hero-action-group">
+              <a href="#selected-work" class="btn-luxury-primary magnetic" data-magnetic-strength="0.3">
+                <span class="btn-text">EXPLORE OUR WORK</span>
+                <span class="btn-icon">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+              </a>
+              <a href="#contact" class="btn-luxury-secondary magnetic" data-magnetic-strength="0.2">
+                <span class="btn-text">LET’S TALK</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-col-right" data-reveal="fade-up" data-delay="200">
+            <!-- Strategic Highlights Data Box -->
+            <div class="hero-stat-card">
+              <div class="stat-header">
+                <span class="stat-category">CORE DISCIPLINE</span>
+                <span class="stat-code">BTL // ATL // OOH</span>
+              </div>
+              <ul class="stat-disciplines">
+                <li><span class="disc-num">01</span><span>High-Density Tech Park Activations</span></li>
+                <li><span class="disc-num">02</span><span>Gated Residential Society Takeovers</span></li>
+                <li><span class="disc-num">03</span><span>Fleet & Transit Media (Bus, Cab, Auto)</span></li>
+                <li><span class="disc-num">04</span><span>Precision Newspaper Inserts & WhatsApp</span></li>
+              </ul>
+              <div class="stat-footer">
+                <span class="footer-note">HYPERLOCAL CHENNAI & REGIONAL REACH</span>
+                <span class="footer-gem">◆</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="hero-scroll-indicator" data-reveal="fade">
+          <a href="#brand-intro" class="scroll-link" aria-label="Scroll down to introduction">
+            <span class="scroll-track"><span class="scroll-thumb"></span></span>
+            <span class="scroll-caption">SCROLL TO DISCOVER</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 02 — BRAND INTRODUCTION            -->
+    <!-- ========================================== -->
+    <section id="brand-intro" class="brand-intro-section section-padding" aria-label="Brand Philosophy">
+      <div class="container-luxury">
+        <!-- Section Label -->
+        <div class="section-label-row">
+          <span class="sec-num">02 // 08</span>
+          <span class="sec-divider"></span>
+          <span class="sec-category">BRAND PHILOSOPHY & POSITIONING</span>
+        </div>
+
+        <!-- Asymmetric Editorial Grid -->
+        <div class="intro-grid">
+          <div class="intro-left">
+            <h2 class="editorial-title" data-reveal="fade-up">
+              BEYOND VISIBILITY.<br>
+              <span class="text-gold">WE CREATE</span><br>
+              PRESENCE.
+            </h2>
+            <div class="intro-gold-line" aria-hidden="true"></div>
+            <p class="intro-pull-quote" data-reveal="fade-up" data-delay="100">
+              In a media landscape deafened by endless digital scroll and algorithmic fatigue, real brand power resides in the physical world. Where human eyes look, where feet walk, where residents live, and where professionals work.
+            </p>
+            <p class="intro-body-copy" data-reveal="fade-up" data-delay="200">
+              Brandtrix is an integrated brand promotion, outdoor advertising, and marketing activation power based in Chennai. We do not just place banners; we choreograph real-world encounters between ambitious brands and the exact demographics that drive their growth.
+            </p>
+            <div class="intro-pillars" data-reveal="fade-up" data-delay="300">
+              <div class="pillar-item">
+                <span class="pillar-label">PRIMARY IDENTITY</span>
+                <span class="pillar-value">Brand Promotions & Activations</span>
+                <p class="pillar-sub">Ground campaigns, corporate corridors, residential societies.</p>
+              </div>
+              <div class="pillar-item">
+                <span class="pillar-label">EXECUTION DOMAIN</span>
+                <span class="pillar-value">Chennai & South India Hubs</span>
+                <p class="pillar-sub">Deep route intelligence, verified permissions, zero-leakage delivery.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="intro-right" data-reveal="fade-left">
+            <!-- Asymmetric Editorial Visual Frame -->
+            <div class="editorial-image-frame">
+              <div class="frame-tag-top">
+                <span>COORD // 13.0827° N, 80.2707° E</span>
+                <span>PHYSICAL ACTIVATION</span>
+              </div>
+              <div class="frame-media">
+                <img src="assets/ground-dominance.jpg" 
+                     alt="Urban metropolis at night with transit motion and illuminated billboards" 
+                     class="editorial-img"
+                     loading="lazy">
+                <div class="frame-overlay-tint"></div>
+                <div class="frame-badge">
+                  <span class="badge-title">GROUND DOMINANCE</span>
+                  <span class="badge-desc">Turning high-density footfall into brand equity</span>
+                </div>
+              </div>
+              <div class="frame-tag-bottom">
+                <span>ESTABLISHED CHENNAI EXPERIENTIAL DISCIPLINE</span>
+                <span>BRANDTRIX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 03 — WHAT WE DO (SERVICE CHAPTERS) -->
+    <!-- ========================================== -->
+    <section id="services" class="services-section section-padding" aria-label="Our Service Capabilities">
+      <div class="container-luxury">
+        <div class="section-label-row">
+          <span class="sec-num">03 // 08</span>
+          <span class="sec-divider"></span>
+          <span class="sec-category">SERVICE CAPABILITIES & DISCIPLINES</span>
+        </div>
+
+        <div class="section-header-flex">
+          <div>
+            <h2 class="editorial-title" data-reveal="fade-up">
+              THE ARSENAL OF<br>
+              <span class="text-gold">BRAND PENETRATION.</span>
+            </h2>
+            <p class="section-lead" data-reveal="fade-up" data-delay="100">
+              Organized into four rigorous execution chapters. Each channel is engineered for maximum real-world engagement, demographic accuracy, and unmistakable brand presence.
+            </p>
+          </div>
+          <!-- Quick Filter / Chapter Switcher -->
+          <div class="chapter-quick-nav d-none-mobile" data-reveal="fade-up" data-delay="150">
+            <span class="nav-hint">SELECT CHAPTER:</span>
+            <div class="chapter-chips" role="tablist">
+              <button type="button" class="chapter-chip active" data-target-chapter="chapter-01" role="tab" aria-selected="true">01. ACTIVATIONS</button>
+              <button type="button" class="chapter-chip" data-target-chapter="chapter-02" role="tab" aria-selected="false">02. OUTDOOR</button>
+              <button type="button" class="chapter-chip" data-target-chapter="chapter-03" role="tab" aria-selected="false">03. PROMOTIONS</button>
+              <button type="button" class="chapter-chip" data-target-chapter="chapter-04" role="tab" aria-selected="false">04. EVENTS</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDITORIAL SERVICE CHAPTERS -->
+        <div class="chapters-container">
+
+          <!-- CHAPTER 01: ON-GROUND ACTIVATIONS -->
+          <article class="service-chapter" id="chapter-01" data-reveal="fade-up">
+            <div class="chapter-meta">
+              <span class="ch-number">CHAPTER 01</span>
+              <span class="ch-badge">CORE COMPETENCY</span>
+            </div>
+            <div class="chapter-grid">
+              <div class="ch-info">
+                <h3 class="ch-title">ON-GROUND ACTIVATIONS</h3>
+                <p class="ch-tagline">Face-to-face immersion within exclusive, high-value captive environments.</p>
+                <p class="ch-body">
+                  When you enter the environments where people live, study, and work, brand resistance dissolves into curiosity. We design, permit, fabricate, and staff immersive on-ground activation zones that turn passersby into active brand advocates.
+                </p>
+                <div class="ch-offerings-grid">
+                  <div class="offering-card">
+                    <span class="offering-num">01.1</span>
+                    <h4 class="offering-name">Society Activations</h4>
+                    <p class="offering-desc">Gated residential communities, luxury apartment complexes, and weekend community engagement drives across Chennai.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">01.2</span>
+                    <h4 class="offering-name">College & Campus Promotions</h4>
+                    <p class="offering-desc">High-energy collegiate campaigns, youth fest sponsorships, interactive campus kiosks, and student influencer mobilization.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">01.3</span>
+                    <h4 class="offering-name">PG & Hostel Activations</h4>
+                    <p class="offering-desc">Direct access to the thriving student and young working professional demographic residing in key institutional clusters.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">01.4</span>
+                    <h4 class="offering-name">Tech Park Activations</h4>
+                    <p class="offering-desc">High-spend IT corridor activations (OMR, Guindy, Porur), cafeteria pop-ups, employee engagement kiosks, and product sampling.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ch-visual">
+                <div class="visual-card">
+                  <img src="assets/tech-environment.jpg" 
+                       alt="Modern architecture representing high-value tech parks and residential communities" 
+                       loading="lazy">
+                  <div class="visual-caption">
+                    <span class="cap-tag">ENVIRONMENT</span>
+                    <span class="cap-title">Captive Urban Clusters & Tech Parks</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CHAPTER 02: OUTDOOR BRANDING -->
+          <article class="service-chapter" id="chapter-02" data-reveal="fade-up">
+            <div class="chapter-meta">
+              <span class="ch-number">CHAPTER 02</span>
+              <span class="ch-badge">HIGH FREQUENCY</span>
+            </div>
+            <div class="chapter-grid">
+              <div class="ch-info">
+                <h3 class="ch-title">OUTDOOR & TRANSIT BRANDING</h3>
+                <p class="ch-tagline">Dominating the visual arteries and arterial corridors of the city.</p>
+                <p class="ch-body">
+                  Turn the city’s daily commute into your personal brand corridor. From arterial transit wraps that travel across metropolitan Chennai to static neighborhood touchpoints that build subconscious recall, our outdoor portfolio ensures 24/7 continuous visibility.
+                </p>
+                <div class="ch-offerings-grid">
+                  <div class="offering-card">
+                    <span class="offering-num">02.1</span>
+                    <h4 class="offering-name">Bus Branding</h4>
+                    <p class="offering-desc">Full fleet wraps, back panels, and side vinyls moving through high-density commercial and residential transit routes.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">02.2</span>
+                    <h4 class="offering-name">Cab & Auto Fleet Branding</h4>
+                    <p class="offering-desc">High-mobility urban fleet branding ensuring repetitive impressions across airports, railway hubs, and dense streets.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">02.3</span>
+                    <h4 class="offering-name">Lamp Post & Pole Kiosks</h4>
+                    <p class="offering-desc">Rhythmic, sequential street-level branding along key commercial avenues creating unmissable visual repetition.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">02.4</span>
+                    <h4 class="offering-name">Gate Boards & No-Parking Boards</h4>
+                    <p class="offering-desc">Persistent eye-level placements at society entrances and residential compounds with long-term retention value.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">02.5</span>
+                    <h4 class="offering-name">Umbrella Branding</h4>
+                    <p class="offering-desc">High-utility street-corner vendor and hotspot umbrella branding providing widespread localized presence.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ch-visual">
+                <div class="visual-card">
+                  <img src="assets/transit-outdoor.jpg" 
+                       alt="Transit and outdoor urban media" 
+                       loading="lazy">
+                  <div class="visual-caption">
+                    <span class="cap-tag">OUTDOOR IMPACT</span>
+                    <span class="cap-title">Arterial City Wraps & Street Precision</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CHAPTER 03: PROMOTIONAL CAMPAIGNS -->
+          <article class="service-chapter" id="chapter-03" data-reveal="fade-up">
+            <div class="chapter-meta">
+              <span class="ch-number">CHAPTER 03</span>
+              <span class="ch-badge">TARGETED OUTREACH</span>
+            </div>
+            <div class="chapter-grid">
+              <div class="ch-info">
+                <h3 class="ch-title">PROMOTIONAL CAMPAIGNS</h3>
+                <p class="ch-tagline">Direct-to-consumer tactical collateral and high-conversion channels.</p>
+                <p class="ch-body">
+                  When rapid velocity and measurable response are mandatory, tactical promotion bridges the gap. We handle the logistical heavy lifting of localized paper-to-digital funnels, physical handoffs, and synchronized digital messaging.
+                </p>
+                <div class="ch-offerings-grid">
+                  <div class="offering-card">
+                    <span class="offering-num">03.1</span>
+                    <h4 class="offering-name">Hotspot & Flyer Operations</h4>
+                    <p class="offering-desc">Trained promoters positioned at high-footfall intersections, metro stations, and business hubs delivering curated collateral.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">03.2</span>
+                    <h4 class="offering-name">Targeted Newspaper Inserts</h4>
+                    <p class="offering-desc">Pincode-level distribution inside leading morning English & Tamil dailies, landing directly onto the morning tables of target households.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">03.3</span>
+                    <h4 class="offering-name">WhatsApp Promotional Blasts</h4>
+                    <p class="offering-desc">Compliant, segmented conversational campaigns with rich media, interactive buttons, and immediate inquiry attribution.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">03.4</span>
+                    <h4 class="offering-name">Framed Standees & Floor Displays</h4>
+                    <p class="offering-desc">Premium architectural standees strategically positioned inside retail plazas, cinema foyers, and convention centres.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ch-visual">
+                <div class="visual-card">
+                  <img src="assets/promotional-planning.jpg" 
+                       alt="Creative promotional planning and tactical deployment" 
+                       loading="lazy">
+                  <div class="visual-caption">
+                    <span class="cap-tag">TACTICAL REACH</span>
+                    <span class="cap-title">Micro-Targeted Pincode Penetration</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- CHAPTER 04: EVENT MANAGEMENT -->
+          <article class="service-chapter" id="chapter-04" data-reveal="fade-up">
+            <div class="chapter-meta">
+              <span class="ch-number">CHAPTER 04</span>
+              <span class="ch-badge">SPECIALIZED CAPABILITY</span>
+            </div>
+            <div class="chapter-grid">
+              <div class="ch-info">
+                <h3 class="ch-title">EVENT MANAGEMENT</h3>
+                <p class="ch-tagline">Flawless staging and high-impact experiential environments for key brand moments.</p>
+                <p class="ch-body">
+                  While our primary identity centers on promotions and advertising activations, we manage events with the precision of a high-end production house. From keynote launches to corporate retreats, every detail is treated as an extension of brand prestige.
+                </p>
+                <div class="ch-offerings-grid">
+                  <div class="offering-card">
+                    <span class="offering-num">04.1</span>
+                    <h4 class="offering-name">Brand & Product Launches</h4>
+                    <p class="offering-desc">Cinematic stagecraft, audio-visual choreography, media relations, and unveiling experiences that leave lasting prestige.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">04.2</span>
+                    <h4 class="offering-name">Corporate Conferences & Summits</h4>
+                    <p class="offering-desc">End-to-end delegate management, turnkey AV production, stage fabrication, and seamless keynote coordination.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">04.3</span>
+                    <h4 class="offering-name">Promotional Pop-Up Events</h4>
+                    <p class="offering-desc">Experiential retail setups, weekend mall atriums, and festival activations that spark organic social sharing.</p>
+                  </div>
+                  <div class="offering-card">
+                    <span class="offering-num">04.4</span>
+                    <h4 class="offering-name">Special Event Execution</h4>
+                    <p class="offering-desc">Bespoke dealer meets, investor showcases, and institutional galas executed with military-grade discipline.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="ch-visual">
+                <div class="visual-card">
+                  <img src="assets/event-staging.jpg" 
+                       alt="Atmospheric brand launch event with dramatic stage lighting" 
+                       loading="lazy">
+                  <div class="visual-caption">
+                    <span class="cap-tag">EXPERIENTIAL OCCASION</span>
+                    <span class="cap-title">Flawless Staging & Production</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 04 — SELECTED WORK / CAMPAIGNS     -->
+    <!-- ========================================== -->
+    <section id="selected-work" class="selected-work-section section-padding" aria-label="Selected Brand Campaigns">
+      <div class="container-luxury">
+        <div class="section-label-row">
+          <span class="sec-num">04 // 08</span>
+          <span class="sec-divider"></span>
+          <span class="sec-category">CURATED CAMPAIGN DOSSIERS</span>
+        </div>
+
+        <div class="section-header-flex">
+          <div>
+            <h2 class="editorial-title" data-reveal="fade-up">
+              CASE ARCHIVES.<br>
+              <span class="text-gold">PROVEN REAL-WORLD REACH.</span>
+            </h2>
+            <p class="section-lead" data-reveal="fade-up" data-delay="100">
+              A curated look into our execution frameworks across Chennai’s most demanding commercial, collegiate, and residential environments.
+            </p>
+          </div>
+          <div class="gallery-counter d-none-mobile" data-reveal="fade-up" data-delay="150">
+            <span class="counter-curr">05</span>
+            <span class="counter-slash">/</span>
+            <span class="counter-tot">DOSSIERS DISPLAYED</span>
+          </div>
+        </div>
+
+        <!-- ASYMMETRIC EDITORIAL WORK GRID -->
+        <div class="campaign-grid">
+
+          <!-- PROJECT 01 -->
+          <article class="campaign-card card-large" data-reveal="fade-up" data-cursor-text="VIEW DOSSIER">
+            <div class="card-inner">
+              <div class="card-media-wrapper">
+                <img src="assets/tech-takeover.jpg" 
+                     alt="OMR Tech Corridor Activation Case Study" 
+                     class="card-img" 
+                     loading="lazy">
+                <div class="card-glow"></div>
+              </div>
+              <div class="card-editorial-content">
+                <div class="card-meta">
+                  <span class="meta-tag">TECH PARK ACTIVATION</span>
+                  <span class="meta-loc">OMR & GUINDY CORRIDORS, CHENNAI</span>
+                </div>
+                <h3 class="card-title">Apex Tech Park Multi-Campus Takeover</h3>
+                <p class="card-desc">
+                  Synchronized multi-hub activation across 8 premier IT business parks. Deployed interactive experiential pavilions, digital sampling kiosks, and corporate contest funnels engaging over 45,000 corporate professionals over 10 business days.
+                </p>
+                <div class="card-specs">
+                  <div class="spec-col"><span class="spec-k">DISCIPLINE</span><span class="spec-v">Corporate BTL</span></div>
+                  <div class="spec-col"><span class="spec-k">TOUCHPOINTS</span><span class="spec-v">8 Tech Campuses</span></div>
+                  <div class="spec-col"><span class="spec-k">EXECUTION</span><span class="spec-v">Turnkey Permitted</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02 -->
+          <article class="campaign-card card-medium" data-reveal="fade-up" data-delay="100" data-cursor-text="VIEW DOSSIER">
+            <div class="card-inner">
+              <div class="card-media-wrapper">
+                <img src="assets/luxury-societies.jpg" 
+                     alt="Aura Living Luxury Society Activations" 
+                     class="card-img" 
+                     loading="lazy">
+                <div class="card-glow"></div>
+              </div>
+              <div class="card-editorial-content">
+                <div class="card-meta">
+                  <span class="meta-tag">SOCIETY ACTIVATION</span>
+                  <span class="meta-loc">ECR, ADYAR & VELACHERY</span>
+                </div>
+                <h3 class="card-title">Aura Living Luxury Society Blitz</h3>
+                <p class="card-desc">
+                  Exclusive weekend community takeovers across 32 premium gated residentials. High-touch demo lounges, branded no-parking boards, and resident WhatsApp notifications.
+                </p>
+                <div class="card-specs">
+                  <div class="spec-col"><span class="spec-k">DISCIPLINE</span><span class="spec-v">Gated BTL</span></div>
+                  <div class="spec-col"><span class="spec-k">SOCIETIES</span><span class="spec-v">32 Communities</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03 -->
+          <article class="campaign-card card-medium" data-reveal="fade-up" data-delay="200" data-cursor-text="VIEW DOSSIER">
+            <div class="card-inner">
+              <div class="card-media-wrapper">
+                <img src="assets/transit-fleet.jpg" 
+                     alt="Metropolitan Transit Wrap Media" 
+                     class="card-img" 
+                     loading="lazy">
+                <div class="card-glow"></div>
+              </div>
+              <div class="card-editorial-content">
+                <div class="card-meta">
+                  <span class="meta-tag">OUTDOOR TRANSIT</span>
+                  <span class="meta-loc">GREATER CHENNAI METROPOLITAN</span>
+                </div>
+                <h3 class="card-title">Metropolitan Transit Dominance Fleet</h3>
+                <p class="card-desc">
+                  High-visibility arterial transit campaign deploying complete wraps across 60 government buses and 150 airport cab panels along key commuter arteries.
+                </p>
+                <div class="card-specs">
+                  <div class="spec-col"><span class="spec-k">DISCIPLINE</span><span class="spec-v">Transit OOH</span></div>
+                  <div class="spec-col"><span class="spec-k">FLEET</span><span class="spec-v">210 Total Units</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04 -->
+          <article class="campaign-card card-large" data-reveal="fade-up" data-cursor-text="VIEW DOSSIER">
+            <div class="card-inner">
+              <div class="card-media-wrapper">
+                <img src="assets/campus-surge.jpg" 
+                     alt="Collegiate Youth Brand Blitz" 
+                     class="card-img" 
+                     loading="lazy">
+                <div class="card-glow"></div>
+              </div>
+              <div class="card-editorial-content">
+                <div class="card-meta">
+                  <span class="meta-tag">CAMPUS & PG ACTIVATION</span>
+                  <span class="meta-loc">22 COLLEGES & HOSTEL CLUSTERS</span>
+                </div>
+                <h3 class="card-title">Gen-Next Campus & Hostel Synchronized Surge</h3>
+                <p class="card-desc">
+                  Targeted youth acquisition blitz mobilizing campus ambassador networks, branded interactive stages during annual fests, and targeted sampling in student PG hostels throughout Chennai and suburbs.
+                </p>
+                <div class="card-specs">
+                  <div class="spec-col"><span class="spec-k">DISCIPLINE</span><span class="spec-v">Campus BTL</span></div>
+                  <div class="spec-col"><span class="spec-k">COLLEGES</span><span class="spec-v">22 Institutions</span></div>
+                  <div class="spec-col"><span class="spec-k">HOSTELS</span><span class="spec-v">40+ Clusters</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 05 -->
+          <article class="campaign-card card-medium" data-reveal="fade-up" data-delay="100" data-cursor-text="VIEW DOSSIER">
+            <div class="card-inner">
+              <div class="card-media-wrapper">
+                <img src="assets/print-inserts.jpg" 
+                     alt="Tactical Pincode Newspaper Inserts and Standees" 
+                     class="card-img" 
+                     loading="lazy">
+                <div class="card-glow"></div>
+              </div>
+              <div class="card-editorial-content">
+                <div class="card-meta">
+                  <span class="meta-tag">PROMOTIONAL INSERTS</span>
+                  <span class="meta-loc">PINCODE TARGETED, CHENNAI</span>
+                </div>
+                <h3 class="card-title">Omni-Channel Morning Table Inserts</h3>
+                <p class="card-desc">
+                  High-precision pincode insertion into leading English & Tamil morning papers accompanied by 50 framed standees in neighbourhood commercial plazas.
+                </p>
+                <div class="card-specs">
+                  <div class="spec-col"><span class="spec-k">DISCIPLINE</span><span class="spec-v">Print BTL</span></div>
+                  <div class="spec-col"><span class="spec-k">AUDIT</span><span class="spec-v">100% Geo-verified</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 05 — OUR APPROACH                  -->
+    <!-- ========================================== -->
+    <section id="approach" class="approach-section section-padding" aria-label="Our Strategic Methodology">
+      <div class="container-luxury">
+        <div class="section-label-row">
+          <span class="sec-num">05 // 08</span>
+          <span class="sec-divider"></span>
+          <span class="sec-category">STRATEGIC METHODOLOGY</span>
+        </div>
+
+        <div class="section-header-flex">
+          <div>
+            <h2 class="editorial-title" data-reveal="fade-up">
+              FROM STRATEGY<br>
+              <span class="text-gold">TO STREETS.</span>
+            </h2>
+            <p class="section-lead" data-reveal="fade-up" data-delay="100">
+              A military-grade execution chain that transforms high-level brand ambition into flawlessly executed ground reality.
+            </p>
+          </div>
+          <div class="method-stamp d-none-mobile" data-reveal="fade-up" data-delay="150">
+            <span class="stamp-border"></span>
+            <span class="stamp-text">CHENNAI GROUND BLUEPRINT</span>
+          </div>
+        </div>
+
+        <!-- TIMELINE ROADMAP -->
+        <div class="approach-timeline">
+
+          <div class="timeline-step" data-reveal="fade-up">
+            <div class="step-num-col">
+              <span class="step-num">01</span>
+              <span class="step-line"></span>
+            </div>
+            <div class="step-body">
+              <span class="step-phase">PHASE 01 // DISCOVERY & RECON</span>
+              <h3 class="step-title">Understand the Brand & Demographic Target</h3>
+              <p class="step-desc">
+                We dissect your brand positioning, core commercial objectives, unit economics, and target audience persona. We conduct hyperlocal geospatial analysis across Chennai to identify the exact societies, tech parks, or transit corridors with the highest density of potential buyers.
+              </p>
+              <div class="step-deliverables">
+                <span class="d-chip">Target Demographic Profile</span>
+                <span class="d-chip">Geospatial Cluster Mapping</span>
+                <span class="d-chip">Channel Viability Matrix</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step" data-reveal="fade-up" data-delay="100">
+            <div class="step-num-col">
+              <span class="step-num">02</span>
+              <span class="step-line"></span>
+            </div>
+            <div class="step-body">
+              <span class="step-phase">PHASE 02 // ARCHITECTURE & PERMISSIONS</span>
+              <h3 class="step-title">Plan the Campaign & Secure Clearances</h3>
+              <p class="step-desc">
+                We architect the complete media plan, route sequencing, promoter staffing, collateral design, and legal permissions. From gated community RWAs to tech park facility management and municipal transit authorities, all clearances are locked down in advance.
+              </p>
+              <div class="step-deliverables">
+                <span class="d-chip">RWA & Tech Park Permits</span>
+                <span class="d-chip">Transit Route Allotments</span>
+                <span class="d-chip">Fabrication Blueprints</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step" data-reveal="fade-up" data-delay="200">
+            <div class="step-num-col">
+              <span class="step-num">03</span>
+              <span class="step-line"></span>
+            </div>
+            <div class="step-body">
+              <span class="step-phase">PHASE 03 // FABRICATION & MOBILIZATION</span>
+              <h3 class="step-title">Execute the Activation on Ground</h3>
+              <p class="step-desc">
+                Our in-house fabrication, printing, and operations teams mobilize on schedule. Branded kiosks, bus wraps, gazebos, framed standees, and sampling kits are deployed with high aesthetic consistency. Trained brand promoters are briefed on product pitch and consumer interaction.
+              </p>
+              <div class="step-deliverables">
+                <span class="d-chip">Premium Material Fabrication</span>
+                <span class="d-chip">Promoter Uniforms & Briefings</span>
+                <span class="d-chip">On-Site Supervisor Deployment</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step" data-reveal="fade-up" data-delay="300">
+            <div class="step-num-col">
+              <span class="step-num">04</span>
+              <span class="step-line"></span>
+            </div>
+            <div class="step-body">
+              <span class="step-phase">PHASE 04 // REAL-WORLD MOMENTUM</span>
+              <h3 class="step-title">Create Visibility & High-Frequency Recall</h3>
+              <p class="step-desc">
+                The campaign goes live with coordinated omni-presence. Transit fleets move through primary routes while street pole kiosks and gate boards reinforce the visual rhythm. On-ground teams capture leads, answer questions, and direct traffic to your digital and physical storefronts.
+              </p>
+              <div class="step-deliverables">
+                <span class="d-chip">Real-time GPS Tracking</span>
+                <span class="d-chip">Interactive Lead Capture</span>
+                <span class="d-chip">Live Field Supervisions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-step" data-reveal="fade-up" data-delay="400">
+            <div class="step-num-col">
+              <span class="step-num">05</span>
+              <span class="step-line"></span>
+            </div>
+            <div class="step-body">
+              <span class="step-phase">PHASE 05 // VERIFICATION & REPORTING</span>
+              <h3 class="step-title">Deliver Measurable Impact & Photo Audits</h3>
+              <p class="step-desc">
+                Zero guesswork. Every flyer handed, every bus wrapped, every standee installed, and every society activation is documented with time-stamped, geo-tagged photography and verified lead rosters delivered in a comprehensive post-campaign executive dossier.
+              </p>
+              <div class="step-deliverables">
+                <span class="d-chip">Geo-tagged Photo Proof</span>
+                <span class="d-chip">Footfall & Lead Roster</span>
+                <span class="d-chip">Executive ROI Summary</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 06 — EVENT MANAGEMENT SPECIALTY    -->
+    <!-- ========================================== -->
+    <section id="event-management" class="event-section section-padding" aria-label="Event Management Discipline">
+      <div class="container-luxury">
+        <div class="section-label-row">
+          <span class="sec-num">06 // 08</span>
+          <span class="sec-divider"></span>
+          <span class="sec-category">SPECIALIZED PRODUCTION DISCIPLINE</span>
+        </div>
+
+        <div class="event-editorial-banner">
+          <div class="event-banner-media">
+            <img src="assets/event-staging.jpg" 
+                 alt="Luxury brand launch keynote stage with dramatic architectural illumination" 
+                 loading="lazy">
+            <div class="event-banner-overlay"></div>
+          </div>
+
+          <div class="event-banner-content" data-reveal="fade-up">
+            <span class="event-kicker">ADDITIONAL CAPACITY // SELECTIVE PRODUCTION</span>
+            <h2 class="event-headline">
+              WHEN THE BRAND CALLS FOR<br>
+              <span class="text-gold">AN IMMERSIVE OCCASION.</span>
+            </h2>
+            <p class="event-copy">
+              While our daily heartbeat is brand promotion, advertising, and street-level activation, we bring the same uncompromising precision to bespoke event management. Brand unveilings, corporate summits, investor galas, and milestone celebrations — executed without the chaos typical of ordinary event planners.
+            </p>
+            <div class="event-badges-row">
+              <div class="e-badge"><span class="e-b-dot">◆</span><span>Cinematic Stage Architecture</span></div>
+              <div class="e-badge"><span class="e-b-dot">◆</span><span>High-Definition Audiovisual Engineering</span></div>
+              <div class="e-badge"><span class="e-b-dot">◆</span><span>VVIP Protocol & Guest Flow</span></div>
+              <div class="e-badge"><span class="e-b-dot">◆</span><span>Press & Media Staging</span></div>
+            </div>
+            <div class="event-cta-row">
+              <a href="#contact" class="btn-luxury-primary magnetic" data-magnetic-strength="0.2">
+                <span>INQUIRE FOR AN EVENT</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE CAMPAIGN REACH PLANNER         -->
+    <!-- (Added-value luxury tool for CMOs)         -->
+    <!-- ========================================== -->
+    <section class="planner-section section-padding" aria-label="Interactive Campaign Reach Estimator">
+      <div class="container-luxury">
+        <div class="planner-box">
+          <div class="planner-header">
+            <span class="planner-tag">STRATEGIC ESTIMATOR // CHENNAI CORRIDORS</span>
+            <h3 class="planner-title">Interactive Brand Activation Calculator</h3>
+            <p class="planner-desc">
+              Select your desired channel deployment mix below to calculate estimated real-world impressions and generate a tailored campaign brief for your brand.
+            </p>
+          </div>
+
+          <div class="planner-grid">
+            <div class="planner-controls">
+              <!-- Control 01 -->
+              <div class="calc-group">
+                <div class="calc-label-row">
+                  <span class="calc-label">TECH PARK ACTIVATIONS</span>
+                  <span class="calc-val" id="valTechParks">3 Parks</span>
+                </div>
+                <input type="range" min="0" max="15" value="3" class="luxury-range" id="rangeTechParks" aria-label="Number of Tech Parks">
+                <span class="calc-hint">OMR, Guindy, Porur IT Hubs</span>
+              </div>
+
+              <!-- Control 02 -->
+              <div class="calc-group">
+                <div class="calc-label-row">
+                  <span class="calc-label">GATED RESIDENTIAL SOCIETIES</span>
+                  <span class="calc-val" id="valSocieties">10 Societies</span>
+                </div>
+                <input type="range" min="0" max="50" value="10" class="luxury-range" id="rangeSocieties" aria-label="Number of Residential Societies">
+                <span class="calc-hint">Premium ECR, OMR & Central Chennai Gated Communities</span>
+              </div>
+
+              <!-- Control 03 -->
+              <div class="calc-group">
+                <div class="calc-label-row">
+                  <span class="calc-label">TRANSIT BUS & CAB FLEET</span>
+                  <span class="calc-val" id="valTransit">20 Vehicles</span>
+                </div>
+                <input type="range" min="0" max="100" value="20" class="luxury-range" id="rangeTransit" aria-label="Transit Vehicles Fleet">
+                <span class="calc-hint">Arterial Bus Wraps and Airport Corridor Cabs</span>
+              </div>
+
+              <!-- Control 04 -->
+              <div class="calc-group">
+                <div class="calc-label-row">
+                  <span class="calc-label">TARGETED NEWSPAPER INSERTS</span>
+                  <span class="calc-val" id="valInserts">25,000 Copies</span>
+                </div>
+                <input type="range" min="0" max="100000" step="5000" value="25000" class="luxury-range" id="rangeInserts" aria-label="Newspaper Inserts Count">
+                <span class="calc-hint">Pincode-targeted household morning placement</span>
+              </div>
+            </div>
+
+            <div class="planner-summary">
+              <div class="summary-card">
+                <span class="sum-eyebrow">ESTIMATED PHYSICAL IMPACT</span>
+                <div class="sum-stat">
+                  <span class="sum-big-number" id="estImpressions">385,000+</span>
+                  <span class="sum-unit">ESTIMATED IMPRESSIONS</span>
+                </div>
+                <div class="sum-divider"></div>
+                <div class="sum-details">
+                  <div class="sum-row">
+                    <span>Direct Face-to-Face Footfall:</span>
+                    <strong id="estFootfall">24,500+</strong>
+                  </div>
+                  <div class="sum-row">
+                    <span>Estimated High-Value Dwell Time:</span>
+                    <strong>1.8 - 4.5 Mins</strong>
+                  </div>
+                  <div class="sum-row">
+                    <span>Demographic Precision Score:</span>
+                    <strong class="text-gold">94.8% High-Affluence</strong>
+                  </div>
+                </div>
+                <a href="#contact" class="btn-luxury-primary btn-block magnetic" id="applyPlanBtn">
+                  <span>TRANSFER TO BRIEF INQUIRY</span>
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 07 — WHY BRANDTRIX                 -->
+    <!-- ========================================== -->
+    <section id="why-brandtrix" class="why-section section-padding" aria-label="Why Brandtrix Advantages">
+      <div class="container-luxury">
+        <div class="section-label-row">
+          <span class="sec-num">07 // 08</span>
+          <span class="sec-divider"></span>
+          <span class="sec-category">AUTHENTIC COMPETITIVE ADVANTAGE</span>
+        </div>
+
+        <div class="why-manifesto-grid">
+          <div class="why-left">
+            <h2 class="editorial-title" data-reveal="fade-up">
+              THE THREE LAWS OF<br>
+              <span class="text-gold">GROUND SUPREMACY.</span>
+            </h2>
+            <p class="section-lead" data-reveal="fade-up" data-delay="100">
+              We do not rely on third-party aggregators or outsourced assumptions. Our strength stems from deep on-ground roots, owned operations, and complete operational transparency.
+            </p>
+          </div>
+          <div class="why-right">
+            <!-- Strength Pillar 01 -->
+            <div class="strength-card" data-reveal="fade-up">
+              <div class="st-num-box"><span class="st-num">01</span></div>
+              <div class="st-content">
+                <h3 class="st-title">CREATIVITY THAT CONNECTS.</h3>
+                <p class="st-body">
+                  An eye-level banner is worthless if the concept does not stop a resident or tech worker in their tracks. We craft tactile, visually striking, culturally resonant creative treatments calibrated for Chennai’s diverse consumer mentality.
+                </p>
+                <span class="st-tag">High-Concept Fabrication & Copywriting</span>
+              </div>
+            </div>
+
+            <!-- Strength Pillar 02 -->
+            <div class="strength-card" data-reveal="fade-up" data-delay="150">
+              <div class="st-num-box"><span class="st-num">02</span></div>
+              <div class="st-content">
+                <h3 class="st-title">EXECUTION THAT REACHES.</h3>
+                <p class="st-body">
+                  We maintain proprietary route mappings, institutional relationships, society access networks, and fleet partnerships across Greater Chennai, Sriperumbudur, OMR, and the South Indian corridor. No bottlenecks. No stalled clearances.
+                </p>
+                <span class="st-tag">Direct Institutional Access & Clearances</span>
+              </div>
+            </div>
+
+            <!-- Strength Pillar 03 -->
+            <div class="strength-card" data-reveal="fade-up" data-delay="300">
+              <div class="st-num-box"><span class="st-num">03</span></div>
+              <div class="st-content">
+                <h3 class="st-title">VISIBILITY THAT MATTERS.</h3>
+                <p class="st-body">
+                  Every deployment is audited. We provide client stakeholders with geo-tagged photographic proof, route timestamps, and verified footfall registries. You never have to wonder if your campaign actually hit the streets.
+                </p>
+                <span class="st-tag">100% Geo-Tagged Proof of Execution</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 08 — CONTACT / FINAL CTA           -->
+    <!-- ========================================== -->
+    <section id="contact" class="contact-section section-padding" aria-label="Contact and Campaign Brief">
+      <div class="container-luxury">
+        <div class="section-label-row">
+          <span class="sec-num">08 // 08</span>
+          <span class="sec-divider"></span>
+          <span class="sec-category">DIRECT ENGAGEMENT & CAMPAIGN INITIATION</span>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Editorial Invitation & Real Info -->
+          <div class="contact-left">
+            <h2 class="editorial-title" data-reveal="fade-up">
+              LET’S PUT YOUR<br>
+              <span class="text-gold">BRAND IN MOTION.</span>
+            </h2>
+            <p class="contact-lead-copy" data-reveal="fade-up" data-delay="100">
+              Whether you are planning a multi-campus tech park takeover, dominating Chennai’s arterial transit routes, or staging a high-profile brand launch, our operations desk is ready to architect your campaign.
+            </p>
+
+            <div class="contact-details-box" data-reveal="fade-up" data-delay="200">
+              <div class="c-detail-item">
+                <span class="c-k">DIRECT HOTLINE // WHATSAPP</span>
+                <a href="tel:+916379886505" class="c-val text-gold-hover">+91 63798 86505</a>
+              </div>
+              <div class="c-detail-item">
+                <span class="c-k">EXECUTIVE EMAIL</span>
+                <a href="mailto:growth@brandtrix.org" class="c-val text-gold-hover">growth@brandtrix.org</a>
+              </div>
+              <div class="c-detail-item">
+                <span class="c-k">HEADQUARTERS</span>
+                <p class="c-val-text">
+                  70/33, Madurai Samy Madam Street,<br>
+                  Perambur, Chennai – 600011,<br>
+                  Tamil Nadu, India.
+                </p>
+              </div>
+              <div class="c-detail-item">
+                <span class="c-k">OPERATIONAL COORDINATES</span>
+                <p class="c-val-coords">13.0827° N, 80.2707° E • IST UTC+5:30</p>
+              </div>
+            </div>
+
+            <!-- Instant WhatsApp Quick Launch -->
+            <div class="quick-whatsapp-card" data-reveal="fade-up" data-delay="300">
+              <div class="wa-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div class="wa-text-box">
+                <span class="wa-title">Need Immediate Campaign Feasibility?</span>
+                <span class="wa-sub">Connect with our Chennai activation leads on WhatsApp.</span>
+              </div>
+              <a href="https://wa.me/916379886505?text=Hello%20Brandtrix%20Team%2C%20I%20would%20like%20to%20discuss%20a%20brand%20promotion%20and%20activation%20campaign." 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="wa-btn magnetic" 
+                 data-magnetic-strength="0.2">
+                <span>CHAT NOW</span>
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1 9L9 1M9 1H2M9 1V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: High-End Campaign Brief Form -->
+          <div class="contact-right" data-reveal="fade-left">
+            <div class="form-luxury-card">
+              <div class="form-top-meta">
+                <span class="f-badge">CLIENT BRIEF FORM</span>
+                <span class="f-note">RESPONSE WITHIN 2 BUSINESS HOURS</span>
+              </div>
+
+              <form id="brandBriefForm" class="brief-form" novalidate>
+                <!-- Service Interest Chips (Multi-select) -->
+                <div class="form-group">
+                  <label class="form-label">CHANNELS OF INTEREST (SELECT MULTIPLE)</label>
+                  <div class="service-pills-selector">
+                    <label class="pill-checkbox">
+                      <input type="checkbox" name="services" value="Tech Park Activations">
+                      <span class="pill-text">Tech Park Activations</span>
+                    </label>
+                    <label class="pill-checkbox">
+                      <input type="checkbox" name="services" value="Society Activations">
+                      <span class="pill-text">Society Activations</span>
+                    </label>
+                    <label class="pill-checkbox">
+                      <input type="checkbox" name="services" value="Outdoor / Transit Branding">
+                      <span class="pill-text">Transit & Outdoor</span>
+                    </label>
+                    <label class="pill-checkbox">
+                      <input type="checkbox" name="services" value="College & Campus">
+                      <span class="pill-text">Campus & PG</span>
+                    </label>
+                    <label class="pill-checkbox">
+                      <input type="checkbox" name="services" value="Newspaper Inserts">
+                      <span class="pill-text">Newspaper Inserts</span>
+                    </label>
+                    <label class="pill-checkbox">
+                      <input type="checkbox" name="services" value="WhatsApp Campaigns">
+                      <span class="pill-text">WhatsApp Campaigns</span>
+                    </label>
+                    <label class="pill-checkbox">
+                      <input type="checkbox" name="services" value="Event Management">
+                      <span class="pill-text">Event Management</span>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Two Column Inputs -->
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="clientName" class="form-label">YOUR FULL NAME *</label>
+                    <input type="text" id="clientName" name="name" class="luxury-input" placeholder="e.g. Vikram Chandran" required>
+                    <span class="input-error-msg">Please enter your name.</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="clientCompany" class="form-label">COMPANY / BRAND NAME *</label>
+                    <input type="text" id="clientCompany" name="company" class="luxury-input" placeholder="e.g. Ather / Swiggy / Titan" required>
+                    <span class="input-error-msg">Please enter your company or brand name.</span>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="clientEmail" class="form-label">WORK EMAIL *</label>
+                    <input type="email" id="clientEmail" name="email" class="luxury-input" placeholder="e.g. vikram@brand.com" required>
+                    <span class="input-error-msg">Please enter a valid business email.</span>
+                  </div>
+                  <div class="form-group">
+                    <label for="clientPhone" class="form-label">PHONE / WHATSAPP NUMBER *</label>
+                    <input type="tel" id="clientPhone" name="phone" class="luxury-input" placeholder="e.g. +91 98765 43210" required>
+                    <span class="input-error-msg">Please enter your phone number.</span>
+                  </div>
+                </div>
+
+                <!-- Project Description -->
+                <div class="form-group">
+                  <label for="projectScope" class="form-label">CAMPAIGN SCOPE & TIMELINES</label>
+                  <textarea id="projectScope" name="scope" rows="3" class="luxury-textarea" placeholder="Briefly describe your target audience, geographical focus (e.g. OMR, Velachery, Anna Nagar), launch window, or specific deliverables..."></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-footer">
+                  <button type="submit" class="btn-luxury-primary btn-submit magnetic" data-magnetic-strength="0.2">
+                    <span class="btn-text">SUBMIT CAMPAIGN BRIEF</span>
+                    <span class="btn-icon">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M13 1H3M13 1V11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                  </button>
+                  <p class="form-privacy-note">
+                    Confidentiality guaranteed. Verified response delivered directly to your corporate inbox or WhatsApp.
+                  </p>
+                </div>
+
+                <!-- Form Submission Status Banner -->
+                <div id="formStatusBanner" class="form-status-banner" style="display: none;"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- EDITORIAL FOOTER                           -->
+  <!-- ========================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container-luxury">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="footer-brand-logo">
+            <img src="assets/brandtrix-logo.jpg" alt="Brandtrix Official Logo" class="footer-logo-img">
+            <div class="footer-brand-text">
+              <span class="f-brand">BRANDTRIX</span>
+              <span class="f-tagline-sub">MAKE YOUR MARK.</span>
+            </div>
+          </div>
+          <p class="footer-tagline">WE MAKE BRANDS IMPOSSIBLE TO IGNORE.</p>
+          <p class="footer-desc">
+            Integrated brand promotion, advertising, ATL/BTL activations, outdoor transit, and experiential marketing based in Chennai, India.
+          </p>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="f-heading">CORE DISCIPLINES</span>
+          <ul class="f-links">
+            <li><a href="#services">Tech Park Activations</a></li>
+            <li><a href="#services">Residential Society Takeovers</a></li>
+            <li><a href="#services">Bus & Cab Fleet Wraps</a></li>
+            <li><a href="#services">College & Campus Blitzes</a></li>
+            <li><a href="#services">Targeted Newspaper Inserts</a></li>
+            <li><a href="#event-management">Bespoke Event Management</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="f-heading">CONNECT & VERIFY</span>
+          <ul class="f-links">
+            <li><a href="tel:+916379886505">+91 63798 86505</a></li>
+            <li><a href="mailto:growth@brandtrix.org">growth@brandtrix.org</a></li>
+            <li><a href="https://wa.me/916379886505" target="_blank" rel="noopener noreferrer">Official WhatsApp Channel</a></li>
+            <li><span class="f-muted">Perambur, Chennai - 600011</span></li>
+            <li><span class="f-muted">Tamil Nadu, India</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="f-copy">
+          &copy; <span id="currentYear">2026</span> BRANDTRIX ADVERTISING & ACTIVATIONS. ALL RIGHTS RESERVED.
+        </div>
+        <div class="f-extra">
+          <span>OPERATIONAL LAT: 13.0827° N • LONG: 80.2707° E</span>
+          <a href="#hero" class="f-top-link magnetic" data-magnetic-strength="0.3">
+            <span>BACK TO TOP</span>
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 9V1M5 1L1 5M5 1L9 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DOSSIER DETAIL MODAL -->
+  <div class="dossier-modal" id="dossierModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-dialog">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close Dossier">
+        <span>CLOSE</span> &times;
+      </button>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected dynamically by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/audio.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
